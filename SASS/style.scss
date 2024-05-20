@@ -1,0 +1,167 @@
+// FONT FAMILY IMPORT
+@import 'https://fonts.googleapis.com/css2?family=Shrikhand&display=swap';
+
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
+
+// WILD_CARD    
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+}
+
+// VARIABLES COLORS
+$primary-color: #9356DC;
+$light-grey: #EAEAEA;
+$grey-txt: #353535;
+$grey-background: #F6F6F6;
+$functionning-icon-color: #7E7E7E;
+$restaurant-new-background-color: #99E2D0;
+$restaurant-new-txt-color: #008766;
+
+
+// GENERIC BUTTON
+@mixin generic-btn{
+    border-radius: 25px;
+    border: none;
+    padding: 15px 20px;
+    margin:  auto;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+@mixin display-center {
+    display: flex;
+    justify-content: center;
+}
+
+// MOBILE DISPLAY
+@media (max-width: 768px) {
+    body {
+        font-family: "Roboto", sans-serif;
+    }
+    .logo__div {
+        @include display-center;
+        padding: 13px 0;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        .logo__div--size {
+            width: 200px;
+        }
+    }
+    .location-ban {
+        @include display-center;
+        align-items: center;
+        gap: 17px;
+        box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.25), 
+        inset 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+        padding: 15px;
+        margin-bottom: 8px;
+        background-color: $light-grey;
+        .location-ban__txt {
+            font-weight: 500;
+        }
+    }
+    
+    .restaurantsDiscover-section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        padding: 30px 50px;
+        background-color: $grey-background ;
+        margin-bottom: 30px;
+        .restaurants-discover__txt {
+            color: $grey-txt;
+            font-weight: 300;
+            font-size: 18px;
+        }
+        .restaurants-discover__btn {
+            @include generic-btn;
+            background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+            color: white;
+        }
+    }
+
+    .functionning-section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        margin: 50px 0;
+        .functionning__btn {
+            @include generic-btn;
+            display: flex;
+            justify-content: center;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 0;
+            gap: 20px;
+            font-size: 16px;
+        }
+        .functionning-step-numbers{
+            position: absolute;
+            left: 10px;
+            padding: 5px 10px;
+            border-radius: 50%;
+            color: white;
+            background-color: $primary-color;
+        }
+        .fa-solid {
+            color: $functionning-icon-color;
+            font-size: larger;
+        } 
+        .fa-solid:hover {
+            color: $primary-color;
+        }
+    }
+
+    .restaurants-section {
+        display: flex;
+        flex-direction: column;
+        background-color: $grey-background;
+        gap: 20px;
+        padding: 20px;
+        margin-bottom: 100px;
+        .restaurant-card {
+            position: relative;
+        }
+        .img-card {
+            width: 100%;
+            height: 200px;
+            border-radius: 20px 20px 0 0;
+            object-fit: cover;
+        }
+
+        .restaurant-new-txt {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: $restaurant-new-background-color;
+            color: $restaurant-new-txt-color;
+            padding: 5px 10px;
+            border-radius: 2px;
+        }
+        .txt-card {
+            font-weight: 300;
+            margin-top: -4px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            position: relative;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 0 0 20px 20px;
+        }
+        .fa-regular.fa-heart {
+            position: absolute;
+            right: 30px;
+            top: 20px;
+            font-size: 25px;
+        }
+    }
+
+    
+
+}
