@@ -1,0 +1,16 @@
+@use "../utils/mixins" as mixins;
+@use "../utils/colors" as colors;
+
+.fa-solid.fa-heart {
+  position: relative;
+  font-size: 25px;
+  background: colors.$background-gradient;
+  color: transparent;
+  background-clip: text;
+  opacity: 0;
+  transition: 350ms 100ms;
+  &:hover {
+    opacity: 1;
+  }
+  }
+  

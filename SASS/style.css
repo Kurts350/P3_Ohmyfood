@@ -12,13 +12,72 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.header .header__logo {
+.header__logo {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   font-family: "Shrikhand", cursive;
   text-align: center;
   padding: 13px 0;
   position: relative;
+  text-align: center;
   z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .header__logo {
+    padding: 0;
+    margin: 30px 0;
+    box-shadow: none;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 13%;
+  }
+  .restaurant__display {
+    display: flex;
+    flex-direction: row;
+    gap: 0 100px;
+  }
+  .restaurant__card {
+    width: 50%;
+  }
+}
+.reservation__btn {
+  border-radius: 25px;
+  border: none;
+  padding: 15px 20px;
+  margin: auto;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  color: white;
+  cursor: pointer;
+  opacity: 1;
+  transition: 350ms 100ms;
+}
+.reservation__btn:hover {
+  opacity: 0.8;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.fa-regular.fa-heart {
+  position: absolute;
+  font-size: 25px;
+}
+
+.fa-solid.fa-heart {
+  position: relative;
+  font-size: 25px;
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  opacity: 0;
+  transition: 350ms 100ms;
+}
+.fa-solid.fa-heart:hover {
+  opacity: 1;
 }
 
 .bannerLocation {
@@ -35,6 +94,11 @@ body {
   font-weight: 500;
 }
 
+@media (min-width: 1024px) {
+  .bannerLocation {
+    box-shadow: none;
+  }
+}
 .reservation {
   display: flex;
   flex-direction: column;
@@ -48,15 +112,6 @@ body {
   font-weight: 300;
   font-size: 18px;
 }
-.reservation .reservation__btn {
-  border-radius: 25px;
-  border: none;
-  padding: 15px 20px;
-  margin: auto;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  color: white;
-}
 
 .functionning {
   display: flex;
@@ -64,6 +119,11 @@ body {
   gap: 30px;
   padding: 20px;
   margin: 50px 0;
+}
+.functionning__display {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .functionning .functionning__btn {
   border-radius: 25px;
@@ -78,10 +138,11 @@ body {
   margin: 0;
   gap: 20px;
   font-size: 16px;
+  position: relative;
 }
 .functionning .functionning__btn--numbers {
   position: absolute;
-  left: 10px;
+  left: -10px;
   padding: 5px 10px;
   border-radius: 50%;
   color: white;
@@ -133,22 +194,68 @@ body {
   padding: 10px 15px;
   border-radius: 0 0 20px 20px;
 }
-.restaurant .fa-regular.fa-heart {
+
+.fa-solid.fa-heart {
   position: absolute;
-  right: 30px;
   top: 20px;
-  font-size: 25px;
+  right: 30px;
 }
 
+.fa-regular.fa-heart {
+  top: 20px;
+  right: 30px;
+}
+
+@media (min-width: 1024px) {
+  .reservation__title {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 13%;
+  }
+  .restaurant__display {
+    display: flex;
+    flex-direction: row;
+    gap: 0 100px;
+  }
+  .restaurant__card {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .functionning {
+    flex-wrap: wrap;
+    margin: 50px 12%;
+    justify-content: center;
+    align-content: center;
+  }
+  .functionning__display {
+    flex-direction: row;
+    width: 100%;
+  }
+  .functionning__btn {
+    position: relative;
+    width: 32%;
+  }
+  .functionning__btn--txt {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
 .footer {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 20px;
   background-color: #2a2a2a;
   padding: 25px;
   color: white;
 }
-.footer .footer__logo {
+.footer__logo {
   font-family: "Shrikhand", cursive;
   padding-bottom: 16px;
   font-size: large;
@@ -159,4 +266,21 @@ body {
 }
 .footer .ustensil {
   gap: 15px;
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 50px 50px 30px 50px;
+    align-items: center;
+  }
+  .footer__container.space {
+    margin-right: 30px;
+  }
+  .footer__logo {
+    order: 1;
+    padding: 0;
+    padding-left: 60px;
+  }
 }/*# sourceMappingURL=style.css.map */

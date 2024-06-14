@@ -1,0 +1,7 @@
+@use "../utils/mixins" as mixins;
+@use "../utils/colors" as colors;
+
+.fa-regular.fa-heart {
+  position: absolute;
+  font-size: 25px;
+}

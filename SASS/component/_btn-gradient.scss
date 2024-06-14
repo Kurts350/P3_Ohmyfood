@@ -1,0 +1,15 @@
+@use "../utils/mixins" as mixins;
+@use "../utils/colors" as colors;
+
+.reservation__btn {
+    @include mixins.generic-btn;
+    background: colors.$background-gradient;
+    color: white;
+    cursor: pointer;
+    opacity: 1;
+    transition: 350ms 100ms;
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+    }
+  }

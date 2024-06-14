@@ -1,0 +1,177 @@
+// MOBILE DISPLAY BANNER_LOCATION
+@use "../utils/mixins" as mixins;
+@use "../utils/colors" as colors;
+@use "../component/btn-gradient" as btn-gradient;
+@use "../component/heart";
+@use "../component/heart-gradient";
+
+.bannerLocation {
+  @include mixins.display-center;
+  @include mixins.header-shadow;
+  align-items: center;
+  gap: 17px;
+  padding: 15px;
+  background-color: darken($color: colors.$light-grey, $amount: 5);
+  position: relative;
+  &__txt {
+    font-weight: 500;
+  }
+}
+
+// DESKTOP BANNER_LOCATION
+@media (min-width: 1024px) {
+  .bannerLocation {
+    box-shadow: none;
+  }
+}
+
+// MOBILE DISPLAY RESERVATION
+.reservation {
+  @include mixins.display-column;
+  gap: 30px;
+  text-align: center;
+  padding: 30px 50px;
+  background-color: colors.$light-grey;
+  .reservation__txt {
+    color: darken($color: colors.$light-grey, $amount: 80);
+    font-weight: 300;
+    font-size: 18px;
+  }
+}
+
+
+// MOBILE DISPLAY FUNCTIONNING
+.functionning {
+  @include mixins.display-column;
+  gap: 30px;
+  padding: 20px;
+  margin: 50px 0;
+  &__display {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .functionning__btn {
+    @include mixins.generic-btn;
+    @include mixins.display-center;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 0;
+    gap: 20px;
+    font-size: 16px;
+    position: relative;
+    
+    &--numbers {
+      position: absolute;
+      left: -10px;
+      padding: 5px 10px;
+      border-radius: 50%;
+      color: white;
+      background-color: colors.$primary-color;
+    }
+  }
+  .fa-solid {
+    color: darken($color: colors.$light-grey, $amount: 50);
+    font-size: larger;
+  }
+  .fa-solid:hover {
+    color: colors.$primary-color;
+  }
+}
+
+
+// MOBILE DISPLAY RESTAURANT
+.restaurant {
+  @include mixins.display-column;
+  background-color: colors.$light-grey;
+  gap: 20px;
+  padding: 20px;
+  padding-bottom: 100px;
+  .restaurant__card {
+    position: relative;
+    &--img {
+      width: 100%;
+      height: 200px;
+      border-radius: 20px 20px 0 0;
+      object-fit: cover;
+    }
+    &--newTxt {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: colors.$tertiary-color;
+      color: colors.$green;
+      padding: 5px 10px;
+      border-radius: 2px;
+    }
+    &--txt {
+      font-weight: 300;
+      margin-top: -4px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      position: relative;
+      background-color: white;
+      padding: 10px 15px;
+      border-radius: 0 0 20px 20px;
+    }
+  }
+}
+
+.fa-solid.fa-heart {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.fa-regular.fa-heart {
+  top: 20px;
+  right: 30px;
+}
+
+// DESKTOP DISPLAY RESERVATION
+@media (min-width: 1024px) {
+  .reservation__title {
+    font-size: 40px;
+  }
+}
+
+// DESKTOP DISPLAY HOME RESTAURANT
+@media (min-width: 1024px) {
+  .restaurant {
+    @include mixins.display-row;
+    padding: 30px 13%;
+    &__display {
+      display: flex;
+      flex-direction: row;
+      gap: 0 100px;
+    }
+    &__card {
+      width: 50%;
+    }
+  }
+}
+
+// DESKTOP DISPLAY FUNCTIONNING
+@media (min-width: 1024px) {
+  .functionning {
+    flex-wrap: wrap;
+    margin: 50px 12%;
+    justify-content: center;
+    align-content: center;
+
+    &__display {
+      flex-direction: row;
+      width: 100%;
+    }
+    &__btn {
+      position: relative;
+      width: 32%;
+      &--txt {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden
+      }
+    }
+  }
+}

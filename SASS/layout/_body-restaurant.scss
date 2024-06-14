@@ -1,0 +1,23 @@
+@use "../utils/mixins" as mixins;
+@use "../utils/colors" as colors;
+@use "../component/bg-image-restaurant";
+@use "../component/btn-gradient";
+@use "../component/heart";
+@use "../component/heart-gradient";
+@use "../component/menu-card";
+@use "../component/bg-menu";
+@use "../component/menu-area-title";
+@use "../component/menu-head-title";
+
+
+
+.menu {
+  &__head {
+    @include mixins.menu-head;
+  }
+  &__area {
+    @include mixins.display-column;
+    gap: 12px;
+  }
+}
+
