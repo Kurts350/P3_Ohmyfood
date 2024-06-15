@@ -18,6 +18,12 @@
   &__area {
     @include mixins.display-column;
     gap: 12px;
+    &--display {
+    @include mixins.display-column;
+        display: flex;
+        gap: 12px;
+    }
   }
+
 }
 

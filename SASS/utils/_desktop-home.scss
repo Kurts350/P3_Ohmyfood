@@ -1,0 +1,55 @@
+@use "../utils/mixins" as mixins;
+@use "../utils/colors" as colors;
+
+@media (min-width: 1024px) {
+  .reservation__title {
+    font-size: 40px;
+  }
+  .functionning {
+    flex-wrap: wrap;
+    margin: 50px 12%;
+    justify-content: center;
+    align-content: center;
+
+    &__display {
+      flex-direction: row;
+      width: 100%;
+    }
+    &__btn {
+      position: relative;
+      width: 32%;
+      &--txt {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+  .restaurant {
+    @include mixins.display-row;
+    padding: 30px 13%;
+    &__display {
+      display: flex;
+      flex-direction: row;
+      gap: 0 100px;
+    }
+    &__card {
+      width: 50%;
+    }
+  }
+  .footer {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 50px 50px 30px 50px;
+    align-items: center;
+    &__container.space {
+      margin-right: 30px;
+    }
+
+    &__logo {
+      order: 1;
+      padding: 0;
+      padding-left: 60px;
+    }
+  }
+}

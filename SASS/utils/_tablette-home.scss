@@ -1,0 +1,17 @@
+@use "../utils/mixins" as mixins;
+@use "../utils/colors" as colors;
+
+@media (min-width : 768px) {
+  .restaurant {
+    @include mixins.display-row;
+    &__display {
+      display: flex;
+      flex-direction: row;
+      gap: 0 20px;
+    }
+    &__card {
+      width: 50%;
+    }
+  }
+  }
+  

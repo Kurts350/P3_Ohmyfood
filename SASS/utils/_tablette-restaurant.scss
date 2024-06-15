@@ -1,0 +1,13 @@
+@use "../utils/mixins" as mixins;
+@use "../utils/colors" as colors;
+
+@media (min-width: 768px) {
+  .menu__area--display {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+  .card {
+    width: 33%;
+  }
+}

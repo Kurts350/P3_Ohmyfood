@@ -21,22 +21,3 @@
     gap: 15px;
   }
 }
-
-// DESKTOP DISPLAY HOME FOOTER
-@media (min-width: 1024px) {
-  .footer {
-    flex-direction: row;
-    justify-content: flex-end;
-    padding: 50px 50px 30px 50px;
-    align-items: center;
-    &__container.space {
-      margin-right: 30px;
-    }
-
-    &__logo {
-      order: 1;
-      padding: 0;
-      padding-left: 60px;
-    }
-  }
-}

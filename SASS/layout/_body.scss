@@ -5,6 +5,7 @@
 @use "../component/heart";
 @use "../component/heart-gradient";
 
+
 .bannerLocation {
   @include mixins.display-center;
   @include mixins.header-shadow;
@@ -87,6 +88,11 @@
   gap: 20px;
   padding: 20px;
   padding-bottom: 100px;
+  &__display {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
   .restaurant__card {
     position: relative;
     &--img {
@@ -129,49 +135,3 @@
   right: 30px;
 }
 
-// DESKTOP DISPLAY RESERVATION
-@media (min-width: 1024px) {
-  .reservation__title {
-    font-size: 40px;
-  }
-}
-
-// DESKTOP DISPLAY HOME RESTAURANT
-@media (min-width: 1024px) {
-  .restaurant {
-    @include mixins.display-row;
-    padding: 30px 13%;
-    &__display {
-      display: flex;
-      flex-direction: row;
-      gap: 0 100px;
-    }
-    &__card {
-      width: 50%;
-    }
-  }
-}
-
-// DESKTOP DISPLAY FUNCTIONNING
-@media (min-width: 1024px) {
-  .functionning {
-    flex-wrap: wrap;
-    margin: 50px 12%;
-    justify-content: center;
-    align-content: center;
-
-    &__display {
-      flex-direction: row;
-      width: 100%;
-    }
-    &__btn {
-      position: relative;
-      width: 32%;
-      &--txt {
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden
-      }
-    }
-  }
-}
