@@ -1,5 +1,6 @@
 @use "../utils/mixins" as mixins;
 @use "../utils/colors" as colors;
+@use "../utils/animations";
 
 .card {
     @include mixins.display-row;
@@ -12,6 +13,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    animation: menu-appear 3s 10s;
+    animation-fill-mode: both;
     &:hover .card__check {
       margin-right: 0px;
     }
@@ -61,3 +64,4 @@
       }
     }
   }
+

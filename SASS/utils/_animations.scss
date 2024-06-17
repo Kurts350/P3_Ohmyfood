@@ -1,0 +1,21 @@
+@use "../utils/colors" as colors;
+@use "../utils/mixins" as mixins;
+
+@for $i from 1 through 3 {
+    .card:nth-child(#{$i}) {
+        animation-delay:200ms * $i;
+        animation-delay: 3s;
+        animation-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+}
+
+@keyframes menu-appear {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+      transform: scale(1);
+
+  } 
+}
