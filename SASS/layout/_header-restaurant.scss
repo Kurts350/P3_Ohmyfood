@@ -2,9 +2,6 @@
 @use "../utils/_colors.scss" as colors;
 // HEADER
 .header {
-    @include mixins.display-row;
-    @include mixins.display-center;
-    align-items: center;
     position: relative;
     &__logo {
       @include mixins.header-logo;

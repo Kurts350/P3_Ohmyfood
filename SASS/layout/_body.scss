@@ -5,7 +5,6 @@
 @use "../component/heart";
 @use "../component/heart-gradient";
 
-
 .bannerLocation {
   @include mixins.display-center;
   @include mixins.header-shadow;
@@ -19,14 +18,7 @@
   }
 }
 
-// DESKTOP BANNER_LOCATION
-@media (min-width: 1024px) {
-  .bannerLocation {
-    box-shadow: none;
-  }
-}
-
-// MOBILE DISPLAY RESERVATION
+// RESERVATION
 .reservation {
   @include mixins.display-column;
   gap: 30px;
@@ -40,16 +32,14 @@
   }
 }
 
-
-// MOBILE DISPLAY FUNCTIONNING
+// FUNCTIONNING
 .functionning {
   @include mixins.display-column;
   gap: 30px;
   padding: 20px;
   margin: 50px 0;
   &__display {
-    display: flex;
-    flex-direction: column;
+    @include mixins.display-column;
     gap: 20px;
   }
   .functionning__btn {
@@ -61,7 +51,7 @@
     gap: 20px;
     font-size: 16px;
     position: relative;
-    
+ 
     &--numbers {
       position: absolute;
       left: -10px;
@@ -80,8 +70,7 @@
   }
 }
 
-
-// MOBILE DISPLAY RESTAURANT
+// RESTAURANT
 .restaurant {
   @include mixins.display-column;
   background-color: colors.$light-grey;
@@ -89,8 +78,7 @@
   padding: 20px;
   padding-bottom: 100px;
   &__display {
-    display: flex;
-    flex-direction: column;
+    @include mixins.display-column;
     gap: 20px;
   }
   .restaurant__card {
@@ -113,25 +101,23 @@
     &--txt {
       font-weight: 300;
       margin-top: -4px;
-      display: flex;
-      flex-direction: column;
+      @include mixins.display-column;
       gap: 5px;
       position: relative;
-      background-color: white;
+      background-color: colors.$white;
       padding: 10px 15px;
       border-radius: 0 0 20px 20px;
     }
   }
-}
-
-.fa-solid.fa-heart {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-}
-
-.fa-regular.fa-heart {
-  top: 20px;
-  right: 30px;
+  .fa-solid.fa-heart {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
+  
+  .fa-regular.fa-heart {
+    top: 20px;
+    right: 30px;
+  }
 }
 

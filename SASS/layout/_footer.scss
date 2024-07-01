@@ -1,13 +1,13 @@
 @use "../utils/mixins" as mixins;
 @use "../utils/colors" as colors;
 
-// MOBILE DISPLAY FOOTER
+// FOOTER
 .footer {
   @include mixins.display-column;
   gap: 20px;
   background-color: darken($color: colors.$light-grey, $amount: 80);
   padding: 25px;
-  color: white;
+  color: colors.$white;
   &__logo {
     font-family: "Shrikhand", cursive;
     padding-bottom: 16px;

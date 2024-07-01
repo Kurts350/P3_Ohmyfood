@@ -11,30 +11,6 @@
   }
 }
 
-// DESKTOP DISPLAY HOME HEADER
-@media (min-width: 1024px) {
-  .header {
-    &__logo {
-      padding: 0;
-      margin: 30px 0;
-      box-shadow: none;
-    }
-  }
-}
 
 
-// DESKTOP DISPLAY HOME RESTAURANT
-@media (min-width: 1024px) {
-  .restaurant {
-    @include mixins.display-row;
-    padding: 30px 13%;
-    &__display {
-      display: flex;
-      flex-direction: row;
-      gap: 0 100px;
-    }
-    &__card {
-      width: 50%;
-    }
-  }
-}
+
