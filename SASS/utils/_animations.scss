@@ -1,7 +1,7 @@
 @use "../utils/colors" as colors;
 @use "../utils/mixins" as mixins;
 
-@for $i from 1 through 3 {
+@for $i from 1 through 4 {
     .card:nth-child(#{$i}) {
         animation-delay:200ms * $i;
         animation-delay: 3s;
